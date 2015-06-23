@@ -1,38 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
-<head>
-<meta charset="utf-8">
-<title>The Math App</title>
+    <head>
+        <meta charset="utf-8">
+        <title>The Math App</title>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+    </head>
 
-<script type="text/javascript">
-/* Defining Table
- * Input: A person's name
- * Processing: Produce an appropriate greeting
- * Output: The greeting and begin game.
- */
-function displayGreeting() {
-	var nameTextBox = document.getElementById('name'),
-		outputDiv = document.getElementById('output'),
-		alias = nameTextBox.value;
-	
-	if (alias) {
-		outputDiv.innerHTML = "Hello, " + alias + ". Are you ready to play?";
-	}
-	else {
-		outputDiv.innerHTML = "What is your name?,mb ";
-	}
-}
-</script>
-</head>
+    <body>  
 
-<body>  
-<h1>Let's Learn Math!</h1>                           
- 
-<hr>
-<br>
-<input type="text" placeholder="Enter your first name." id="name">
-<button type="button" onclick="displayGreeting()">Start</button><br>
-<div id="output"></div><br>
+        <script type="text/javascript">
+            /* Defining Table
+             * Input: A person's name
+             * Processing: Produce an appropriate greeting
+             * Output: The greeting and begin game.
+             */
+            function displayGreeting() {
+                var nameTextBox = document.getElementById('name'),
+                        outputDiv = document.getElementById('output'),
+                        alias = nameTextBox.value;
 
-</body>       
+                if (alias) {
+                    outputDiv.innerHTML = "Hello, " + alias + ". Are you ready to play?";
+                }
+                else {
+                    outputDiv.innerHTML = "What is your name?,mb ";
+                }
+            }
+        </script>
+
+        <h1>Let's Learn Math!</h1>                           
+        <hr>
+        <br>
+        <input type="text" placeholder="Enter your first name." id="name">
+        <button type="button" onclick="displayGreeting()">Start</button><br>
+        <div id="output"></div><br>
+
+    </body>       
 </html>

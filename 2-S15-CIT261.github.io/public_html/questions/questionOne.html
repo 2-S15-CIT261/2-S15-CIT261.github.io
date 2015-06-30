@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Let's Learn Math!</title>
+        <link rel="stylesheet" href="stylesheets/basicStyles.css">
+
+        <script>
+
+            // **********Welcome Banner and button to switch Welcome to Instructions********* //
+
+            function displayAnswer() {
+
+                //Variables - get name from text box and call it alias
+                var answerTextBox = document.getElementById('answer'),
+                        outputDiv = document.getElementById('output'),
+                        answer = answerTextBox.value;
+
+                //Check for an answer, and if there is one display the new page in AJAX
+                if (answer === 8) {
+
+                    // *** Change this to LOCAL STORAGE (maybe?) *** //
+                    outputDiv.innerHTML = "Congratulations, " + alias + "! You answered the question right!";
+
+                    //AJAX to Go to Instruction Page//
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function ()
+                    {
+                        if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
+                        {
+                            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                        }
+                    };
+                    xmlhttp.open("GET", "answerOne.html", true);
+                    xmlhttp.send();
+                }
+                //Check for a name, and if there is no name display an error message
+                else {
+                    outputDiv.innerHTML = "Oops! Looks like you forgot to write your answer. Please try again!";
+                }
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>  
+
+        <h1>Let's Learn Math!</h1>
+        <hr>
+        <br>
+
+        <!-- **********Welcome Banner and button to switch Welcome to Instructions********* -->
+
+        <div id="myDiv">
+            <h1>Question 1</h1>
+            <p>My sister and I together have 14 Teddy bears. If she has 6, how many Teddy bears are mine?</p>
+            <input type="text" placeholder="Enter a number to answer the math question." id="answer"> <button type="button" onclick="displayAnswer()">Answer</button>
+            <div id="output"></div><br>
+        </div>
+
+
+
+
+    </body>
+</html>

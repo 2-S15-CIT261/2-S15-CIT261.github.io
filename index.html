@@ -6,41 +6,32 @@
         <link rel="stylesheet" href="stylesheets/basicStyles.css">
 
         <script>
-            
+
             // **********Welcome Banner and button to switch Welcome to Instructions********* //
-            
+
             function displayGreeting() {
-                
+
                 //Variables - get name from text box and call it alias
                 var nameTextBox = document.getElementById('name'),
                         outputDiv = document.getElementById('output'),
                         alias = nameTextBox.value;
-                
+
                 //Check for a name, and if there is one display the new page in AJAX
                 if (alias) {
-                    
-                // *** Change this to LOCAL STORAGE (maybe?) *** //
+
+                    // *** Change this to LOCAL STORAGE (maybe?) *** //
                     outputDiv.innerHTML = "Hello, " + alias + ". Let's play the math game!";
 
-                //AJAX to Go to Instruction Page//
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function ()
-                    {
-                        if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
-                        {
-                            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-                        }
-                    };
-                    xmlhttp.open("GET", "instructions.html", true);
-                    xmlhttp.send();
-                }
-                //Check for a name, and if there is no name display an error message
-                else {
+                    //This should be were the instructions are called through JSON or a JAVASCRIPT OBJECT//
+
+
+                    //Check for a name, and if there is no name display an error message
+                } else {
                     outputDiv.innerHTML = "Oops! Looks like you forgot to enter your name. Please enter your name to play.";
                 }
             }
-            
-            
+
+
         </script>
 
     </head>
@@ -50,16 +41,16 @@
         <h1>Let's Learn Math!</h1>
         <hr>
         <br>
-        
+
         <!-- **********Welcome Banner and button to switch Welcome to Instructions********* -->
-        
-        <div id="myDiv"><input type="text" placeholder="Enter your first name." id="name">
-        <button type="button" onclick="displayGreeting()">Continue</button><br>
-        <div id="output"></div><br>
+
+        <div id="myDiv"><input type="text" placeholder="Enter your name." id="name">
+            <button type="button" onclick="displayGreeting()">Continue</button><br>
+            <div id="output"></div><br>
         </div>
         
         
-
-
+        
+        <a href="./questions/questionOne.html">Question One</a>        
     </body>
 </html>

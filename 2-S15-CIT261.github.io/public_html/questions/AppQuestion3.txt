@@ -1,2 +1,0 @@
-<h3>Question #3</h3>
-<p>John has 27 marbles. He lost 13 of them. How many does he have now?</p>

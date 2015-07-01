@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Let's Learn Math!</title>
+        <link rel="stylesheet" href="stylesheets/basicStyles.css">
+
+        <script>
+
+            // **********Welcome Banner and button to switch Welcome to Instructions********* //
+
+            function displayGreeting() {
+
+                //Variables - get name from text box and call it alias... NEED TO PUT NAME IN LOCAL STORAGE SESSION
+                var nameTextBox = document.getElementById('name'),
+                        outputDiv = document.getElementById('output'),
+                        alias = nameTextBox.value;
+
+                //Check for a name, and if there is one display the new page in AJAX
+                if (alias) {
+
+                    // *** Change this to LOCAL STORAGE (maybe?) *** //
+                    outputDiv.innerHTML = "Hello, " + alias + ". Let's play the math game!";
+
+                    //This should be were the instructions are called through JSON or a JAVASCRIPT OBJECT//
+
+
+                    //Check for a name, and if there is no name display an error message
+                } else {
+                    outputDiv.innerHTML = "Oops! Looks like you forgot to enter your name. Please enter your name to play.";
+                }
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>  
+
+        <h1>Let's Learn Math!</h1>
+        <hr>
+        <br>
+
+        <!-- **********Welcome Banner and button to switch Welcome to Instructions********* -->
+
+        <div id="myDiv"><input type="text" placeholder="Enter your name." id="name">
+            <button type="button" onclick="displayGreeting()">Continue</button><br>
+            <div id="output"></div><br>
+        </div>
+        
+        
+        
+        <a href="./questions/questionOne.html">Question One</a>        
+    </body>
+</html>

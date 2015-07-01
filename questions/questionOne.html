@@ -14,7 +14,7 @@
 
             function displayAnswer() {
 
-                //Variables - get name from text box and call it alias
+                //Variables - get answer from text box and call it answer
                 var answerTextBox = document.getElementById('answer'),
                         outputDiv = document.getElementById('output'),
                         answer = answerTextBox.value;
@@ -22,10 +22,7 @@
                 //Check for an answer, and if there is one display the new page in AJAX
                 if (answer == 8) {
 
-                    // *** Change this to LOCAL STORAGE (maybe?) *** //
-                    outputDiv.innerHTML = "Congratulations! You answered the question right!";
-
-                    //AJAX to Go to Instruction Page//
+                //AJAX to Go to Instruction Page//
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function ()
                     {

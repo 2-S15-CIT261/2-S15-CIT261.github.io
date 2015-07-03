@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    
+    <!-- Note: Our coding topics are marked with //*** ***// for easy finding. -->
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Let's Learn Math!</title>
+        <link rel="stylesheet" href="stylesheets/basicStyles.css">
+
+        <script>
+
+            //----- Welcome Banner to collect name and button to switch Welcome to Instructions -----//
+
+            function displayGreeting() {
+
+                // *** NEED TO PUT NAME IN LOCAL STORAGE SESSION ***//
+                
+                //Get name from text box and call it alias
+                var nameTextBox = document.getElementById('name'),
+                        outputDiv = document.getElementById('output'),
+                        alias = nameTextBox.value;
+
+                // *** Check for a name, and if there is one display the new page in AJAX *** //
+                if (alias) {
+
+                    // *** Change this to LOCAL STORAGE (maybe?) *** //
+                    outputDiv.innerHTML = "Hello, " + alias + ". Let's play the math game!";
+
+
+                    // *** The instructions are called through JSON *** //
+
+                    var rules = ["Rule One", "Rule Two", "Rule Three", "Rule Four"];
+
+                    var details = ["Answer the math question by typing a number into the box.",
+                        "If you get the question wrong, you can try again until you get it right!",
+                        "Read the math question.",
+                        "Figure out the math problem."];
+
+                    var instructions = {arr1: rules, arr2: details};
+
+                    document.write("Hello, " + alias + ". Let's play the math game! Here's how: <br />"
+                            + "<h1>Instructions</h1>"
+                            + instructions.arr1[0] + ":" + instructions.arr2[2] + "<br />"
+                            + instructions.arr1[1] + ":" + instructions.arr2[3] + "<br />"
+                            + instructions.arr1[2] + ":" + instructions.arr2[0] + "<br />"
+                            + instructions.arr1[3] + ":" + instructions.arr2[1] + "<br /><br />");
+                    
+                    //Link to go to Question Number One
+                    document.write("<a href=\"./questions/questionOne.html\">"
+                        + "Got it! Let's play!"
+                        + "</a>");
+
+
+                    //Check for a name, and if there is no name display an error message
+                } else {
+                    outputDiv.innerHTML = "Oops! Looks like you forgot to enter your name. Please enter your name to play.";
+                }
+            }
+
+        </script>
+
+    </head>
+
+    <body>  
+
+        <h1>Let's Learn Math!</h1>
+        <hr>
+        <br>
+
+        <!-- Welcome Banner to collect name and button to switch Welcome to Instructions -->
+
+        <div id="myDiv"><input type="text" placeholder="Enter your name." id="name">
+            <button type="button" onclick="displayGreeting()">Continue</button><br>
+            <div id="output"></div><br>
+        </div>        
+    </body>
+</html>

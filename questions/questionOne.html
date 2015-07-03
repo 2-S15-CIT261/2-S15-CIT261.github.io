@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
+    
+    <!-- Note: Our coding topics are marked with //*** ***// for easy finding. -->
+    
     <head>
         <meta charset="utf-8">
         <title>Let's Learn Math!</title>
@@ -10,8 +13,6 @@
 
         <script>
 
-            // **********Welcome Banner and button to switch Welcome to Instructions********* //
-
             function displayAnswer() {
 
                 //Variables - get answer from text box and call it answer
@@ -19,10 +20,10 @@
                         outputDiv = document.getElementById('output'),
                         answer = answerTextBox.value;
 
-                //Check for an answer, and if there is one display the new page in AJAX
+                // Check for an answer, and if there is one display the new page in AJAX
                 if (answer == 8) {
 
-                //AJAX to Go to Instruction Page//
+                // *** AJAX to Go to the answer for Question One *** //
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function ()
                     {
@@ -48,16 +49,12 @@
         <hr>
         <br>
 
-        <!-- **********Welcome Banner and button to switch Welcome to Instructions********* -->
-
         <div id="myDiv">
             <h1>Question 1</h1>
             <p>My sister and I together have 14 Teddy bears. If she has 6, how many Teddy bears are mine?</p>
             <input type="text" placeholder="Enter a number to answer." id="answer"> <button type="button" onclick="displayAnswer()">Answer</button>
             <div id="output"></div><br>
         </div>
-
-
 
 
     </body>

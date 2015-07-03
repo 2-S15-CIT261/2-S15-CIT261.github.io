@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+
+<!-- Note: Our coding topics are marked with //*** ***// for easy finding. -->
+
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
@@ -10,8 +13,6 @@
 
         <script>
 
-            // **********Welcome Banner and button to switch Welcome to Instructions********* //
-
             function displayAnswer() {
 
                 //Variables - get answer from text box and call it answer
@@ -22,7 +23,7 @@
                 //Check for an answer, and if there is one display the new page in AJAX
                 if (answer == 10) {
 
-                    //AJAX to Go to Instruction Page//
+                    // *** AJAX to Go to the answer for Question One *** //
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function ()
                     {
@@ -47,8 +48,6 @@
         <h1>Let's Learn Math!</h1>
         <hr>
         <br>
-
-        <!-- **********Welcome Banner and button to switch Welcome to Instructions********* -->
 
         <div id="myDiv">
             <h3>Question #2</h3>

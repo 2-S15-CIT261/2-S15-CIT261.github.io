@@ -1,6 +1,6 @@
 .flip-container
 {
-    width:1122px
+    width:1122px;
     margin:auto;
     position:relative;
     -webkit-perspective:1000;

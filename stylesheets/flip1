@@ -39,7 +39,7 @@
 .front-card
 {
     z-index: 2;
-    background-image:   url('smiley_face.jpg');
+    background-image:   url('http://i41.tinypic.com/2uqf0qt.jpg');
 }
 
 
@@ -53,7 +53,7 @@
 
 #card1
 {
-    background-image: url('heart.jpg');
+    background-image: url('http://www.hdimageswallpaper.com/wp-content/uploads/2015/06/Baby-Girl-With-Teddy-Bear-4-540x338.jpg');
 }
 #card2
 {

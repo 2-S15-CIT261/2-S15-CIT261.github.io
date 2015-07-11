@@ -19,7 +19,7 @@ function clickCounter() {
         } else {
             sessionStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+        document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + ". Good job!";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
@@ -33,8 +33,8 @@ function clickCounter() {
 
 <p><button onclick="clickCounter()" type="button">Get Score</button></p>
 <div id="result"></div>
-<p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+<p>Close the browser tab (or window) to play the game again.</p>
 </body>
 
 </html>

@@ -17,9 +17,9 @@ function clickCounter() {
         if (sessionStorage.clickcount) {
             sessionStorage.clickcount = Number(sessionStorage.clickcount)+0;
         } else {
-            sessionStorage.clickcount = 3 of out 3;
+            sessionStorage.clickcount = 3;
         }
-        document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + ". Good job! <br>We hope you had fun playing Lets Learn Math.";
+        document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + " out of 3. Good job! <br>We hope you had fun playing Lets Learn Math.";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }

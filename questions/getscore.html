@@ -19,7 +19,7 @@ function clickCounter() {
         } else {
             sessionStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + ". Good job! Thank you. We hope you had fun playing lets learn math.";
+        document.getElementById("result").innerHTML = "Your score is " <b>+ sessionStorage.clickcount +</b> ". Good job! Thank you. <br>We hope you had fun playing lets learn math.";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }

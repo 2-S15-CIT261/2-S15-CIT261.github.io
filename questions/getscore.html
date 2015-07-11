@@ -15,9 +15,9 @@
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+            sessionStorage.clickcount = Number(sessionStorage.clickcount);
         } else {
-            sessionStorage.clickcount = 1;
+            sessionStorage.clickcount = 100;
         }
         document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + ". Good job! <br>We hope you had fun playing Lets Learn Math.";
     } else {

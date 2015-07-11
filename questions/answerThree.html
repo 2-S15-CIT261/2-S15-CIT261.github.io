@@ -10,6 +10,22 @@
         <style>
             // *** This CSS styling should be CSS ANIMATION to automatically flip to the score page. *** //
         </style>
+        
+        <script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount);
+        } else {
+            sessionStorage.clickcount = 100;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
     </head>
     <body>
         <script>
@@ -18,5 +34,8 @@
         </script>
         <img src="http://img-aws.ehowcdn.com/default/ds-photo/getty/article/178/93/86524578_XS.jpg" alt="Marble" style="width:300px; height:200px;">
         <a href="./scoreSheet.html">Get My Score</a>
-    </body>
+        
+        <p><button onclick="clickCounter()" type="button">Get my score</button></p>
+<div id="result"></div>
+</body>
 </html>

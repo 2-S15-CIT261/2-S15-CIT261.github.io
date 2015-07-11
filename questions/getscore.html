@@ -25,16 +25,24 @@ function clickCounter() {
     }
 }
 </script>
+
+<script language="javascript" type="text/javascript">
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
+</script>
+
 </head>
 <body>
 <main>
 <h1><u>Your Score</u><h1/>
-<input type="button" value="End Game" onclick="self.close()">
 </main>
 
 <p><button onclick="clickCounter()" type="button">Get Your Score</button></p>
 <div id="result"></div>
-
+<br>
+<input type="button" value="Close this window" onclick="windowClose();">
 </body>
 
 </html>

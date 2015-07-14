@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- Note: Our coding topics are marked with //*** ***// for easy finding. -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Let's Learn Math!</title>
+        <link rel="stylesheet" href="stylesheets/flip1.css">
+        <style>
+            // *** Put in a CSS Transition to flip to the next question *** //
+        </style>
+
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+0;
+        } else {
+            sessionStorage.clickcount = 3;
+        }
+        document.getElementById("result").innerHTML = "Your score is " + sessionStorage.clickcount + " out of 3. Good job! <br>We hope you had fun playing Lets Learn Math.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+<script>
+document.write("Hello, " + alias + ". Here's your score.");
+</script>
+<script language="javascript" type="text/javascript">
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
+</script>
+
+</head>
+<body>
+<main>
+<h1><u>Your Score</u><h1/>
+</main>
+<p><button onclick="clickCounter()" type="button">Get Your Score</button></p>
+<div id="result"></div>
+<br>
+<a href="http://2-s15-cit261.github.io/questions/getscore.html" onclick="close_window();return false;">End Game</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://2-s15-cit261.github.io">Play Again</a>
+</body>
+
+</html>
